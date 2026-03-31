@@ -1,19 +1,12 @@
 {
   "name": "chainpulse",
-  "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
+  "private": true,
+  "workspaces": [
+    "services/*",
+    "shared"
+  ],
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
-  "devDependencies": {
-    "@types/node": "^25.5.0",
-    "eslint": "^10.1.0",
-    "prettier": "^3.8.1",
-    "ts-node-dev": "^2.0.0",
-    "typescript": "^6.0.2"
+    "build": "npm run build --workspaces",
+    "dev:shipment": "npm --workspace services/shipment-service run dev"
   }
 }
